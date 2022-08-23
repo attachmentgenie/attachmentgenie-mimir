@@ -1,56 +1,55 @@
-# Class to install example.
+# Class to install mimir.
 #
 # @api private
-class example::install {
-  if $::example::manage_user {
-    user { 'example':
+class mimir::install {
+  if $mimir::manage_user {
+    user { 'mimir':
       ensure => present,
-      home   => $::example::install_dir,
-      name   => $::example::user,
+      home   => $mimir::install_dir,
+      name   => $mimir::user,
     }
-    group { 'example':
+    group { 'mimir':
       ensure => present,
-      name   => $::example::group
+      name   => $mimir::group,
     }
   }
-  case $::example::install_method {
+  case $mimir::install_method {
     'package': {
-      if $::example::manage_repo {
-        class { 'example::repo': }
+      if $mimir::manage_repo {
+        class { 'mimir::repo': }
       }
-      package { 'example':
-        ensure => $::example::package_version,
-        name   => $::example::package_name,
+      package { 'mimir':
+        ensure => $mimir::package_version,
+        name   => $mimir::package_name,
       }
     }
     'archive': {
-      file { 'example install dir':
+      file { 'mimir install dir':
         ensure => directory,
-        group  => $::example::group,
-        owner  => $::example::user,
-        path   => $::example::install_dir,
+        group  => $mimir::group,
+        owner  => $mimir::user,
+        path   => $mimir::install_dir,
       }
-      if $::example::manage_user {
-        File[$::example::install_dir] {
-          require => [Group['example'],User['example']],
+      if $mimir::manage_user {
+        File[$mimir::install_dir] {
+          require => [Group['mimir'],User['mimir']],
         }
       }
 
-      archive { 'example archive':
+      archive { 'mimir archive':
         cleanup      => true,
-        creates      => "${::example::install_dir}/example",
+        creates      => "${mimir::install_dir}/mimir",
         extract      => true,
-        extract_path => $::example::install_dir,
-        group        => $::example::group,
-        path         => '/tmp/example.tar.gz',
-        source       => $::example::archive_source,
-        user         => $::example::user,
-        require      => File['example install dir']
+        extract_path => $mimir::install_dir,
+        group        => $mimir::group,
+        path         => '/tmp/mimir.tar.gz',
+        source       => $mimir::archive_source,
+        user         => $mimir::user,
+        require      => File['mimir install dir'],
       }
-
     }
     default: {
-      fail("Installation method ${::example::install_method} not supported")
+      fail("Installation method ${mimir::install_method} not supported")
     }
   }
 }

@@ -1,4 +1,4 @@
-# Class to configure example.
+# Class to configure mimir.
 #
 # @api private
-class example::config {}
+class mimir::config {}

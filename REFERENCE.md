@@ -8,20 +8,20 @@
 
 #### Public Classes
 
-* [`example`](#example): Class to install and configure example.  Use this module to install and configure example.
-* [`example::repo`](#examplerepo): A short summary of the purpose of this class
+* [`mimir`](#mimir): Class to install and configure mimir.  Use this module to install and configure mimir.
+* [`mimir::repo`](#mimirrepo): A short summary of the purpose of this class
 
 #### Private Classes
 
-* `example::config`: Class to configure example.
-* `example::install`: Class to install example.
-* `example::service`: Class to manage the example service.
+* `mimir::config`: Class to configure mimir.
+* `mimir::install`: Class to install mimir.
+* `mimir::service`: Class to manage the mimir service.
 
 ## Classes
 
-### <a name="example"></a>`example`
+### <a name="mimir"></a>`mimir`
 
-Class to install and configure example.
+Class to install and configure mimir.
 
 Use this module to install and configure example.
 

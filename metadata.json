@@ -1,12 +1,12 @@
 {
-  "name": "attachmentgenie-example",
+  "name": "attachmentgenie-mimir",
   "version": "4.0.0",
   "author": "bram vogelaar <bram@attachmentgenie.com>",
-  "summary": "Setup example",
+  "summary": "Setup mimir",
   "license": "MIT",
-  "source": "https://github.com/attachmentgenie/attachmentgenie-example.git",
-  "project_page": "https://github.com/attachmentgenie/attachmentgenie-example",
-  "issues_url": "https://github.com/attachmentgenie/attachmentgenie-example/issues",
+  "source": "https://github.com/attachmentgenie/attachmentgenie-mimir.git",
+  "project_page": "https://github.com/attachmentgenie/attachmentgenie-mimir",
+  "issues_url": "https://github.com/attachmentgenie/attachmentgenie-mimir/issues",
   "dependencies": [
     {
       "name": "puppet/archive",
@@ -51,9 +51,14 @@
     }
   ],
   "tags": [
-    "example"
+    "mimir"
   ],
   "pdk-version": "2.5.0",
+<<<<<<< HEAD
   "template-url": "https://github.com/puppetlabs/pdk-templates#2.2.0",
   "template-ref": "tags/2.2.0-0-g2381db6"
+=======
+  "template-url": "https://github.com/puppetlabs/pdk-templates#2.5.0",
+  "template-ref": "tags/2.5.0-0-g369d483"
+>>>>>>> chore: initial conversion to mimir module
 }

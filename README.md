@@ -1,12 +1,12 @@
-# attachmentgenie-example
+# attachmentgenie-mimir
 
-[![](https://img.shields.io/puppetforge/pdk-version/attachmentgenie/example.svg?style=popout)](https://forge.puppetlabs.com/attachmentgenie/example)
-[![](https://img.shields.io/puppetforge/v/attachmentgenie/example.svg?style=popout)](https://forge.puppetlabs.com/attachmentgenie/example)
-[![](https://img.shields.io/puppetforge/dt/attachmentgenie/example.svg?style=popout)](https://forge.puppetlabs.com/attachmentgenie/example)
-[![Spec Tests](https://github.com/attachmentgenie/attachmentgenie-example/actions/workflows/spec.yml/badge.svg)](https://github.com/attachmentgenie/attachmentgenie-example/actions/workflows/spec.yml)
-[![License](https://img.shields.io/github/license/attachmentgenie/attachmentgenie-example?stype=popout)](https://github.com/attachmentgenie/attachmentgenie-example/blob/master/LICENSE)
+[![](https://img.shields.io/puppetforge/pdk-version/attachmentgenie/mimir.svg?style=popout)](https://forge.puppetlabs.com/attachmentgenie/mimir)
+[![](https://img.shields.io/puppetforge/v/attachmentgenie/mimir.svg?style=popout)](https://forge.puppetlabs.com/attachmentgenie/mimir)
+[![](https://img.shields.io/puppetforge/dt/attachmentgenie/mimir.svg?style=popout)](https://forge.puppetlabs.com/attachmentgenie/mimir)
+[![Spec Tests](https://github.com/attachmentgenie/attachmentgenie-mimir/actions/workflows/spec.yml/badge.svg)](https://github.com/attachmentgenie/attachmentgenie-mimir/actions/workflows/spec.yml)
+[![License](https://img.shields.io/github/license/attachmentgenie/attachmentgenie-mimir?stype=popout)](https://github.com/attachmentgenie/attachmentgenie-mimir/blob/master/LICENSE)
 
-Deploy and configure attachmentgenie's example on a node.
+Deploy and configure attachmentgenie's mimir on a node.
 
 - [Description](#description)
 - [Usage](#usage)
@@ -22,10 +22,10 @@ This project serves as my starter project
 ## Usage
 
 All options and configuration can be done through interacting with the parameters
-on the main example class.
+on the main mimir class.
 These are now documented via [Puppet Strings](https://github.com/puppetlabs/puppet-strings)
 
-You can view example usage in [REFERENCE](REFERENCE.md).
+You can view mimir usage in [REFERENCE](REFERENCE.md).
 
 ## Reference
 

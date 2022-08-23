@@ -1,37 +1,37 @@
-# Class to manage the example service.
+# Class to manage the mimir service.
 #
 # @api private
-class example::service {
-  if $::example::manage_service {
-    case $::example::service_provider {
+class mimir::service {
+  if $mimir::manage_service {
+    case $mimir::service_provider {
       'systemd': {
-        ::systemd::unit_file { "${::example::service_name}.service":
-          content => template('example/example.service.erb'),
-          before  => Service['example'],
+        ::systemd::unit_file { "${mimir::service_name}.service":
+          content => template('mimir/mimir.service.erb'),
+          before  => Service['mimir'],
         }
       }
       default: {
-        fail("Service provider ${::example::service_provider} not supported")
+        fail("Service provider ${mimir::service_provider} not supported")
       }
     }
 
-    case $::example::install_method {
+    case $mimir::install_method {
       'archive': {}
       'package': {
-        Service['example'] {
-          subscribe => Package['example'],
+        Service['mimir'] {
+          subscribe => Package['mimir'],
         }
       }
       default: {
-        fail("Installation method ${::example::install_method} not supported")
+        fail("Installation method ${mimir::install_method} not supported")
       }
     }
 
-    service { 'example':
-      ensure   => $::example::service_ensure,
+    service { 'mimir':
+      ensure   => $mimir::service_ensure,
       enable   => true,
-      name     => $::example::service_name,
-      provider => $::example::service_provider,
+      name     => $mimir::service_name,
+      provider => $mimir::service_provider,
     }
   }
 }

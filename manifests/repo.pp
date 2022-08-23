@@ -3,6 +3,6 @@
 # @summary A short summary of the purpose of this class
 #
 # @example
-#   include example::repo
-class example::repo {
+#   include mimir::repo
+class mimir::repo {
 }
